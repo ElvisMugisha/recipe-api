@@ -86,8 +86,8 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'HOST': os.environ.get('DB_HOST'),  # set in docker-compose.yml
         'NAME': os.environ.get('DB_NAME'),  # set in docker-compose.yml
-        'USER': os.environ.get('DB_USER'),
-        'PASSWORD': os.environ.get('DB_PASS'),
+        'USER': os.environ.get('DB_USER'), # set in docker-compose.yml
+        'PASSWORD': os.environ.get('DB_PASS'), # set in docker-compose.yml
     }
 }
 
