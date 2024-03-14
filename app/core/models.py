@@ -1,7 +1,7 @@
 """ Database models """
 
 from django.db import models
-from django.contrib.auth.models import AbstractBaseUser, BaseUserManager, PermissionsMixin
+from django.contrib.auth.models import AbstractBaseUser, BaseUserManager, PermissionsMixin # noqa
 
 
 class UserManager(BaseUserManager):
@@ -19,7 +19,7 @@ class UserManager(BaseUserManager):
 class User(AbstractBaseUser, PermissionsMixin):
     """ User in the system """
 
-    email = models.EmailField(max_length=255, unique=True, null=False, blank=False)
+    email = models.EmailField(max_length=255, unique=True, null=False, blank=False) # noqa
     name = models.CharField(max_length=255, blank=True, null=True)
     is_active = models.BooleanField(default=True)
     is_staff = models.BooleanField(default=False)
